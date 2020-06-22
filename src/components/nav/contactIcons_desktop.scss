@@ -1,0 +1,26 @@
+$contact-icon-size: 1.75rem;
+
+.contact-icons {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}
+
+.contact-icons__icon {
+  width: $contact-icon-size;
+  height: $contact-icon-size;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.contact-icons__icon_telegram { background-image: url("/src/img/contact-icons/icon-contacts-tg.svg"); }
+.contact-icons__icon_viber { background-image: url("/src/img/contact-icons/icon-contacts-viber.svg"); }
+.contact-icons__icon_whatsapp { background-image: url("/src/img/contact-icons/icon-contacts-whatsapp.svg"); }
+.contact-icons__icon_skype { background-image: url("/src/img/contact-icons/icon-contacts-skype.svg"); }
+.contact-icons__icon_email { background-image: url("/src/img/contact-icons/icon-contacts-email.svg"); }
+ 
+
+.contact-icons__icon + .contact-icons__icon {
+  margin-left: 0.75rem;
+}

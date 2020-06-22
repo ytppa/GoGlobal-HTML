@@ -1,0 +1,167 @@
+/* Block: 4-cells */
+
+.content--4-cells {
+
+  $content--4-cells__bgcolor: $gray;
+  $content--4-cells__trianglecolor: #0aa2d0;
+  $content--4-cells__active-bgcolor: $blue;
+  $content--4-cells__active-side-bgcolor: $dark-blue;
+  $content--4-cells__offset: 37px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: $content--4-cells__bgcolor;
+
+	align-items: stretch;
+  align-content: stretch;
+  
+  .content--4-cells__cell {
+    display: block;
+    width: 50%;
+    position: relative;
+    background: $content--4-cells__active-side-bgcolor;
+
+    .content--4-cells__cell-inner {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      align-content: stretch;
+      cursor: pointer;
+      background-color: $content--4-cells__bgcolor;
+      transition: background-color $interact-duration linear;
+
+      .content--4-cells__cell-image {
+        flex: 0 0 168px;  
+        position: relative;
+        width: 10.5rem;
+        height: 10.5rem;
+    
+        img {   
+          width: inherit;
+          height: inherit;
+          object-fit: cover; 
+        }
+
+        &::before {
+          content: '';
+          display: block;
+          width: 52px;
+          height: 52px;
+          background-color: $content--4-cells__bgcolor;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 0;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          border-style: solid;
+          border-width: 52px 52px 0 0;
+          border-color: $content--4-cells__trianglecolor transparent transparent transparent;
+        }
+      }
+    
+      .content--4-cells__cell-text {
+        flex: 1 1 auto;
+        padding: 5.735rem 2rem 1rem 2rem;
+        min-height: 320px;
+    
+        h3 {
+          padding-top: 0;
+        }
+      }
+
+      /* Hover */
+      transition: transform $interact-duration linear;
+
+      .content--4-cells__cell-text {
+        // transition: all $interact-duration linear;
+      }
+
+      &::after,
+      &::before {
+        content: '';
+        background: $content--4-cells__active-side-bgcolor;
+        position: absolute;
+        transition: all $interact-duration linear;
+      }
+      /* Bottom side */
+      &::after {
+        width: 100%;
+        height: 0px;
+        left: 0px; 
+        bottom: 0px;
+        transform: translateY(100%) skewx(-60.4deg);
+      }
+      /* Left side */
+      &::before {
+        width: 0;
+        height: 100%;
+        left: 0px;
+        transform: translateX(100%) skewy(-29.6deg);
+        top: 0px;
+      }
+    }
+
+
+    &:hover {
+      z-index: 1;
+
+      .content--4-cells__cell-inner {
+        background-color: $content--4-cells__active-bgcolor;
+        transform: translate(37px, -21px);
+
+        .content--4-cells__cell-image {
+          display: none;
+        }
+
+        .content--4-cells__cell-text {
+          padding: 5.735rem 2rem 1rem 2rem;
+          padding: 3.8rem 2rem 2.935rem 5rem;
+          color: white;
+        }
+
+        .content--4-cells__cell-text::after {
+          content: '';
+          display: block;
+          width: 67px;
+          height: 52px;
+          position: absolute;
+          right: 0;
+          top: 0;
+          background-image: url('src/img/forward.svg');
+          background-repeat:  no-repeat; 
+          background-position: 0px top;
+          z-index: 2;
+        }
+
+        /* Bottom side */
+        &::after {
+          width: 100%;
+          height: 21px;
+          left: calc(-#{$content--4-cells__offset} / 2); 
+          bottom: 0;
+          transform: translateY(100%) skewx(-60.4deg);
+        }
+
+        /* Left side */
+        &::before {
+          width: 37px;
+          height: 100%;
+          left: calc(-2 * #{$content--4-cells__offset});
+          transform: translateX(100%) skewy(-29.6deg);
+          top: calc(-8px + #{$content--4-cells__offset} / 2);
+        }
+      }
+    }
+  }
+
+}

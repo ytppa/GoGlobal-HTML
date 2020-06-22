@@ -1,0 +1,42 @@
+/* Block: contacts */
+.contacts {
+  padding: 5.44rem $content-padding 6.7rem $content-padding;
+  background-color: $gray-bg-color;
+  position: relative;
+
+  h2 { 
+    margin-bottom: 2.625rem;
+
+    // 16 28
+    &::before {
+      display: none;
+    }
+  }
+
+  .contacts__section-1 {
+    font-weight: bold;
+
+    p {
+      margin-bottom: 1em;
+      display: block;
+
+      label {
+        display: block;
+      }
+    }
+  }
+
+  .contacts__section-2 {
+    margin-top: 3rem;
+
+    p + p {
+      margin-top: 0.1em;
+    }
+  }
+
+  .buttons {
+    margin-top: 4rem;
+  }
+
+
+}

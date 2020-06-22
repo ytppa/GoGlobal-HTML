@@ -1,0 +1,19 @@
+@import "../../styles-mobile.scss";
+
+
+/**
+ * Main squares animation section on Homepage 
+ */ 
+@import "../../components/animatronix/animatronix_mobile.scss";
+
+@import "../../components/languageBaloons/languageBaloons_mobile.scss";
+
+
+/* BG */ 
+
+body {
+  background-image: url('/src/img/bg-yellow.svg'), url('src/img/bg-red.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-size: 3100px, 3900px;
+  background-position: center top, center 2500px;
+}

@@ -1,0 +1,14 @@
+/* MAIN */
+
+.main {
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  z-index: 2;
+  display: flex; 
+  flex-direction: column;
+
+  .main__header { flex: 0 0 $header-height; }
+  .main__content { flex: 1 1 auto; }
+  .main__footer { flex: 0 0 $footer-height; }
+}

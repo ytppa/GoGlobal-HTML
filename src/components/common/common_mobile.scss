@@ -1,0 +1,17 @@
+@import "./common.scss";
+
+
+$content-width: 82.5vw;
+$content-padding: 8.75vw;
+
+$header-height: 88px;
+$footer-height: 329px;
+$section--padding-under-header: 2rem;
+$section-margin: 4.5rem;
+
+
+
+
+@import "./texts/texts_mobile.scss";
+@import "./icon/icon_mobile.scss";
+@import "./button/button_mobile.scss";

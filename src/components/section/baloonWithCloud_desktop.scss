@@ -1,0 +1,28 @@
+/* Baloon with cloud  */
+.baloon-with-cloud {
+  position: absolute;
+  top: -1.4rem;
+  left: -1.2rem;
+  width: 367px;
+
+  #baloon-stroke .baloon {
+    transition: transform $baloon-anim-hover-duration $baloon-anim-hover-easing;
+  }
+  
+  #baloon-stroke .baloon-flowing {
+    animation-name: baloon-flowing;
+    animation-duration: $baloon-anim-flowing-duration;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+}
+
+.article_animation .baloon {
+  transform: translateY(-4.5rem);
+}
+  
+@keyframes baloon-flowing {
+  0%   { transform: translateY(0px)}
+  50%  { transform: translateY(-10px)}
+  100% { transform: translateY(0px)}
+}  

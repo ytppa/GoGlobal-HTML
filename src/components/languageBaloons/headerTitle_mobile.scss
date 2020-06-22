@@ -1,0 +1,43 @@
+/* Block: header-title */
+
+.header-title {
+  position: relative;
+  padding-left: 8.65vw;
+  padding-right: 8.65vw;
+}
+
+.header-title__title {
+  font-size: 2.25rem;
+  padding: 1em 0 0.75em 0;
+  line-height: 1.21em;
+  font-weight: 700;
+  color: $header-main-color;
+}
+
+.header-title__link {
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: 700;  
+  line-height: 1.21em;
+  color: $header-alt-color;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: calc(0.8em + 6px);
+  cursor: pointer;
+}
+
+.header-title__link::after {
+  /* Underline */
+  content: '';
+  position: absolute;
+  top: 1.83em;
+  left: 0;
+  width: 51px;
+  height: 6px;
+  background-color: $header-alt-color;
+  transition: width calc(1.5 * #{$interact-duration}) ease-in-out;
+}
+
+.header-title__link:hover::after {
+  width: 100%;
+}

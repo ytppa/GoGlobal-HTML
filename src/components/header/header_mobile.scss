@@ -1,0 +1,14 @@
+/* HEADER */
+
+.header {
+  width: 100%;
+  max-width: $content-width;
+  height: $header-height;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  
+  .header__item-1 { flex: 0 0 auto; }
+  .header__item-2 { }
+  .header__item-3 { display: none; }
+}

@@ -1,0 +1,101 @@
+
+
+/* Block: Content-item */
+.content-item {
+  position: relative;
+  margin-bottom: $section-margin;
+  width: 100%;
+  z-index: 1;
+
+  & + .content-item {
+    margin-top: $section-margin;
+  }
+  
+  &.content-item_fixed-width,
+  .content-item__inner-fixed-width {
+    max-width: $content-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.content-item_full-width {  
+  }
+
+  &.content-item_teachers {
+    margin-top: 6.5rem;
+
+    .buttons {
+      width: 570px;
+      margin: 0 auto;
+    }
+  }
+
+
+  &.content-item_right-cloud {
+    background-image: url('/src/img/cloud-2.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: calc(50% + 720px) 0%;
+
+    .article {
+      width: 67%;
+    }
+
+    .article__inner {
+      padding-top: 2.2rem;
+    }
+  }
+
+  &.content-item_last {
+    margin-bottom: 0;
+    z-index: 0;
+  }
+}
+
+
+.content-item_right-image {
+
+  .content-item__inner {
+    display: flex;
+
+    .section {
+      flex: 1 1 auto;
+    }
+
+    .content-item__right-image {
+      flex: 1 1 500px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .buttons,
+  .article__inner {
+    margin-top: 3.5rem;
+  }
+
+  .ufo img {
+    width: 302px;
+  }
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1280px) {
+  .content-item {
+    &.content-item_fixed-width {
+      max-width: 90vw;
+    }
+    &.content-item_full-width {
+      .content-item__inner-fixed-width {
+        max-width: 90vw;
+      }
+    }
+  }
+}

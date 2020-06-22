@@ -1,0 +1,24 @@
+$special-offer-width: 45vw;
+
+#red-cube-special-offers {
+  background-image: url("/src/img/special-offers-1.svg");
+  background-repeat: no-repeat;
+  font-size: 0;
+  z-index: 1;
+  outline: none !important;
+  -webkit-tap-highlight-color: rgba(0,0,0,0); 
+  -webkit-tap-highlight-color: transparent; 
+
+  width: $special-offer-width;
+  height: calc(#{$special-offer-width} * 1.045);
+  background-size: $special-offer-width calc(#{$special-offer-width} * 1.045);
+
+  position: absolute;
+  left: 9vw;
+  top: calc(696px + 10vw);
+
+  &:active, &:hover {
+    background-image: url("/src/img/special-offers-2.svg");
+  }
+
+}

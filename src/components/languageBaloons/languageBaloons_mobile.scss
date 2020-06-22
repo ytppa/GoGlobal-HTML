@@ -1,0 +1,70 @@
+@import "./headerTitle_mobile.scss";
+@import "./specialOffers_mobile.scss";
+@import "./handIcon_mobile.scss";
+
+
+/* Language baloons */
+
+.language-baloons {
+  height: 1160px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.language-baloons__waiter { display: none; }
+  
+.language-baloons__container {
+  padding: 2rem 0 0 0;
+  position: relative;
+  width: 200vw;
+  height: auto; // 424px; // 132vw;
+  display: flex;
+  flex-wrap: wrap;
+
+  &.flickity-enabled {
+    display: block;
+    width: 100%;
+  }
+}
+
+
+/* Baloon */
+.language-baloon {
+  width: 50vw;
+  height: 211px; // 66vw;
+  position: relative;
+
+  img {
+    width: 81px; // 23.3vw;
+    // max-width: 100px;
+    height: 117px; // auto;
+    position: absolute;
+    left: 9.06vw;
+    top: 17px;
+  }
+
+  .language-baloon__title {
+    font-size: 0.875rem;
+    line-height: 1.25em;
+    color: $header-main-color;
+    font-weight: 500;
+
+    width: 105px;
+    position: absolute; 
+    left: 9.06vw;
+    top: 161px;
+  }
+
+  .language-baloons__hand-icon {
+    width: 41px;
+    height: 41px;
+    background-image: url('/src/img/hand-horysontal-swipe.svg');
+
+    position: absolute;
+    left: 50%;
+    top: calc(100vh - 100px);
+    transform: translateX(-50%);
+  }
+}

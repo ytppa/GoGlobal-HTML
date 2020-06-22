@@ -1,0 +1,18 @@
+/* LOGO */
+
+$logo-width: 22.5vw;
+
+.logo {
+  background-color: white;
+  padding:
+    calc(0.36 * #{$logo-width})
+    calc(0.20 * #{$logo-width})
+    calc(0.31 * #{$logo-width})
+    calc(0.18 * #{$logo-width})
+  ;
+
+    img {
+      width: $logo-width;
+      display: block;
+    }
+}

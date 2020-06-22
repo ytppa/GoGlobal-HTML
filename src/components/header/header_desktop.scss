@@ -1,0 +1,15 @@
+/* HEADER */
+
+.header {
+  width: 100%;
+  max-width: $content-width;
+  height: $header-height;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  // background-color: $blue;
+}
+
+.header__item-1 { flex: 0 0 auto; }
+.header__item-2 { flex: 1 1 auto; }
+.header__item-3 { flex: 0 0 auto; }

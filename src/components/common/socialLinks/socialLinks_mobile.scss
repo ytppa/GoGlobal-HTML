@@ -1,0 +1,14 @@
+/* Block: social-links */
+.social-links {
+  display: flex;
+
+  .social-links__item {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-right: 1rem;
+
+    &.social-links__item_fb { background: url('/src/img/social-icons/social-fb.svg') no-repeat center center; }
+    &.social-links__item_vk { background: url('/src/img/social-icons/social-vk.svg') no-repeat center center; }
+  }
+}

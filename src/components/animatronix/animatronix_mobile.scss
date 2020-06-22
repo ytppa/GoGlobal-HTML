@@ -1,0 +1,79 @@
+/* CUBES */ 
+
+.animatronix {
+  width: 100%;
+  height: calc(700px + 145vw);
+  position: absolute;
+  overflow: hidden;
+  margin: 0 auto;
+  visibility: visible!important;
+  z-index: 1;
+
+  $tmp_indent: 0px;
+
+  // Blue 
+  .blue-cube {
+    width: 1570px;
+    height: 1108px;
+    background-image: url('src/img/blue-cube_mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+
+    position: absolute;
+    left: -610px;
+    top: calc(-150px + #{$tmp_indent});
+    // transform: translateX(calc(-50%));
+  }
+
+  #blue-cube { 
+    display: none;
+  }
+
+
+  // Red
+  .red-cube {
+    width: 145vw; // 464px
+    height: 144vw; // 461px
+    background-image: url("/src/img/red-cube_mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    position: absolute;
+    left: 18.1vw;
+    top: calc(696px + #{$tmp_indent});
+    
+  }
+
+  #red-cube,
+  #red-cube-girl {
+    display: none;
+  }
+
+  // Green
+  .green-cube,
+  #green-cube {
+    display: none;
+  }
+
+
+  /* Clouds */
+
+  .cloud {
+    width: 257px;
+    height: 143px;
+    position: absolute;
+    left: -87px;
+    top: 994px;
+  }
+
+  .cloud_left {
+    .cloud__shadow {
+      display: none;
+    }
+  }
+
+  .cloud_right {
+    display: none;
+  }
+}

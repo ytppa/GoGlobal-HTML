@@ -1,0 +1,61 @@
+/**
+  * Common styles (variables, body, texts, colors, buttons, etc)
+  */
+@import "./components/common/common_desktop.scss";
+
+
+/**
+  * Basic page structure
+  */ 
+@import "./components/main/main_desktop.scss";
+
+@import "./components/header/header_desktop.scss";
+
+@import "./components/logo/logo_desktop.scss";
+
+@import "./components/nav/nav_desktop.scss";
+
+@import "./components/signin/signin_desktop.scss";
+
+@import "./components/footer/footer_desktop.scss";
+
+@import "./components/content/content_desktop.scss";
+
+@import "./components/content/content-item_desktop.scss";
+
+
+
+
+/** 
+  * A variety of Sections 
+  */
+@import "./components/section/section_desktop.scss";
+
+@import "./components/section/baloonWithCloud_desktop.scss";
+
+@import "./components/entryBlocks/content-4Cells/content-4Cells_desktop.scss";
+
+@import "./components/entryBlocks/content-4Columns/content-4Columns_desktop.scss";
+
+
+/** 
+  * Specific entry blokcs
+  */ 
+@import "./components/entryBlocks/reviews/reviews_desktop.scss";
+
+@import "./components/entryBlocks/contacts/contacts_desktop.scss";
+
+@import "./components/entryBlocks/horSlider/horSlider_desktop.scss";
+
+/**
+ * Other
+ */
+@import "./components/popup/popup_desktop.scss";
+
+@import "./components/form/form_desktop.scss";
+
+
+
+
+
+

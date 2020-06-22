@@ -1,0 +1,91 @@
+
+/* Block: contacts */
+.contacts {
+  position: relative;
+  background-color: $gray-bg-color;
+
+  &::before {
+    content:'';
+    display: block;
+    background-image: url('/src/img/contacts__baloon.svg'), url('/src/img/contacts_wo-baloon.svg'), url('/src/img/contacts__baloon-shadow.svg');
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: left 40% bottom 20px, left 40% bottom 20px, left 40% bottom 20px;
+    
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: -500px;
+
+    transition: background-position $baloon-anim-hover-duration ease-in-out;
+  }
+
+  &.run-animation::before {
+    background-position: left 40% bottom 50px, left 40% bottom 20px, left 47% bottom 24px;
+  }
+
+  &.contacts_fixed-width {
+
+    .contacts__inner {
+      max-width: $content-width;
+      margin: 0 auto; 
+      padding-left: 43%;
+    }
+  }
+
+
+  h2 {
+    padding-top: 0;
+
+    &::before { display: none; }
+  }
+
+
+  .buttons {
+    margin-top: 4rem;
+  }
+}
+
+.contacts__text {
+  padding-top: 8rem;
+  padding-bottom: 6rem;
+  z-index: 2;
+  position: relative;
+}
+
+
+.contacts__section-1 {
+  margin-top: 3rem;
+  font-weight: bold;
+
+  p + p {
+    margin-top: .5em;
+  }
+
+}
+
+.contacts__section-2 {
+  margin-top: 3rem;
+
+  p + p {
+    margin-top: 0.1em;
+  }
+}
+
+
+.contacts_white-bg {
+  background-color: transparent;
+  margin-top: -5rem;
+  
+  &::before {
+    background-image: 
+      url('/src/img/contacts__baloon.svg'), 
+      url('/src/img/contacts-2_wo-baloon.svg'), 
+      url('/src/img/contacts__baloon-shadow.svg');
+  }
+}
+
+.contacts__form {
+  max-width: 470px;
+  margin-left: 3rem;
+}

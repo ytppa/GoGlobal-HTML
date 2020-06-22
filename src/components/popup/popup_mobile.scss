@@ -1,0 +1,168 @@
+.pop-up-container {
+  display: none;
+  
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+
+  .pop-up-container__fading {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    display: none;
+  }
+  
+  &.pop-up-container_opened {  
+    display: block;
+
+    .pop-up-container__fading {
+      display: block;
+      background-color: rgba(0,0,0,0.4);
+
+      animation-name: popup-fading-appearing;
+      animation-duration: $interact-duration;
+      animation-timing-function: ease-out;
+      animation-iteration-count: 1;
+
+    }
+  }
+}
+
+
+.pop-up {
+  display: none;
+  background-color: white;
+  border-radius: 2px;
+  overflow: scroll;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+
+  .buttons {
+    width: auto;
+  }
+  
+  .button {
+    padding: 0.9375rem 2rem;
+  }
+
+  &.pop-up_opened {
+    display: block;
+
+    animation-name: popup-appearing;
+    animation-duration: $interact-duration;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+  }  
+}
+
+.pop-up__inner {
+  padding: 2rem;
+  position: relative;
+
+  > * + * {
+    margin-top: 2rem;
+  }
+}
+
+.pop-up__close-icon {
+  display: block;
+  width: 3.3125rem;
+  height: 3.3125rem;
+  border-radius: 2px;
+  background-color: $yellow;
+  cursor: pointer;
+
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 0.9375rem;
+    height: 0.9375rem;
+    background-image: url('/src/img/icons/icon-close.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform $interact-duration linear;
+  }
+
+  &:hover {
+  }
+}
+
+
+
+
+.pop-up_message-success {
+  .pop-up__inner {
+    padding: 2rem 3rem;
+
+    &> * + * {
+    margin-top: 2.5rem;
+    }
+  }
+
+  .pop-up__message {
+    text-align: center; 
+
+    h4 {
+      font-size: 1.125rem;
+      line-height: 1.556em;
+      padding: 0;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.75em;
+      margin-top: 1.375em;
+    }
+  }
+}
+
+.pop-up_message-success {
+  .pop-up__icon {
+    min-width: 90px;
+    height: 52px;
+    background-image: url('/src/img/icons/icon-plane.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+  
+  }
+}
+
+  
+
+
+@keyframes popup-fading-appearing {
+    0% { background-color: rgba(0,0,0,0.0); }
+  100% { background-color: rgba(0,0,0,0.4); }
+}
+
+@keyframes popup-appearing {
+  0% { 
+    opacity: 0;
+    bottom: 80vh;
+  }
+  100% { 
+    opacity: 1;
+    bottom: 0;
+  }
+}

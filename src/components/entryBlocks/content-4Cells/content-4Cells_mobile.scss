@@ -1,0 +1,110 @@
+/* Block: 4-cells */
+
+.content--4-cells {
+
+  $content--4-cells__bgcolor: $gray;
+  $content--4-cells__trianglecolor: #0aa2d0;
+  $content--4-cells__active-bgcolor: $blue;
+  // $content--4-cells__active-side-bgcolor: $dark-blue;
+  // $content--4-cells__offset: 37px;
+
+  display: block;
+  position: relative;
+  min-height: 512px;
+
+
+  &.flickity-enabled .flickity-page-dots {
+    position: absolute;
+    bottom: -29px;
+    left: $content-padding;
+  }
+
+  & + .buttons {
+    margin-top: 68px;
+  }
+
+  .content--4-cells__cell {
+    display: block;
+    position: relative;
+    display: inline-block;
+    width: 261px;
+    min-height: 468px;
+    background-color: $content--4-cells__bgcolor;
+    margin-left: -1.4rem;
+    margin-right: -1.4rem;
+    transition: margin-top $interact-duration linear, 
+      background-color $interact-duration linear,
+      color $interact-duration linear;
+    
+    .content--4-cells__cell-inner {
+      padding: 2rem 1.625rem 2.5rem 1.625rem;
+    }
+
+    .content--4-cells__cell-image {
+      height: 170px;
+      width: auto;
+
+      img {   
+        width: inherit;
+        height: inherit;
+        object-fit: cover; 
+      }
+    }
+
+    .content--4-cells__cell-text {
+      h3 {
+        font-size: 1.5rem;
+        line-height: 1.25em;
+        padding-top: 0;
+        margin-bottom: 2em;
+      }
+
+      p {
+        font-size: 0.875rem;
+        line-height: 1.71em; 
+      }
+    }
+
+    
+
+
+    &[aria-hidden] {
+      z-index: 1;
+      margin-top: 2.75rem;
+    }
+
+
+
+    &.is-selected:not([aria-hidden]) {
+      margin-top: 0;
+      background-color: $content--4-cells__active-bgcolor;
+      z-index: 2;
+
+      .content--4-cells__cell-image {
+        display: none;
+      }
+      
+
+      .content--4-cells__cell-text {
+        color: white;
+        padding-top: 6.375rem;
+
+
+        &::after {
+          content: '';
+          display: block;
+          width: 67px;
+          height: 52px;
+          position: absolute;
+          right: 0;
+          top: 0;
+          background-image: url('src/img/forward.svg');
+          background-repeat:  no-repeat; 
+          background-position: 0px top;
+          z-index: 2;
+        }
+      }
+    }
+  }
+
+}

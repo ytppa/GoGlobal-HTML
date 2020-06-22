@@ -1,0 +1,142 @@
+
+/* AMIMATION */ 
+
+.animatronix {
+  width: 100%;
+  height: 2000px;
+  position: absolute;
+  overflow: hidden;
+  margin: 0 auto;
+  visibility: visible!important;
+  z-index: 1;
+
+  $tmp_indent: 0px;
+
+  // Blue 
+  .blue-cube {
+    width: 2650px;
+    height: 1px;
+    position: absolute;
+    left: 50%;
+    top: calc(-673px + #{$tmp_indent});
+    transform: translateX(calc(-50% - 215px));
+  }
+
+  #blue-cube { 
+    .top   { fill: $blue; }
+    .side  { fill: $dark-blue; }
+    .front { fill: $dark-blue; }
+  }
+
+  // Green
+  .green-cube {
+    width: 528px;
+    height: 1px;
+    position: absolute;
+    left: 50%;
+    top: calc(682px + #{$tmp_indent});
+    transform: translateX(calc(-50% + 284px));
+
+    #green-cube {
+      position: relative;
+    }
+    
+    #green-cube--shadow {
+      position: absolute;
+      width: 100%;
+      left: -25px;
+      top: 61.4px;
+
+      .path-1,
+      .path-2 { 
+        fill: rgba(0,0,0,.2);
+      }
+    }
+
+  }
+
+  #green-cube { 
+    .top   { fill: #48C0B6; }
+    .side  { fill: #1C6D67; }
+    .front { fill: #1C6D67; }
+  }
+
+  // Red
+  .red-cube {
+    width: 1135px;
+    height: 1122px;
+    position: absolute;
+    left: 50%;
+    top: calc(-4px + #{$tmp_indent});
+    transform: translateX(calc(-50% + 867px));
+  }
+
+  #red-cube-girl {
+    position: absolute;
+    left: 10px;
+    // top: 33.87%;
+    // width: 42.1%;
+    top: 34.1%;
+    width: 42.16%;
+  }
+
+
+  #green-cube { 
+    .top   { fill: #48C0B6; }
+    .side  { fill: #1C6D67; }
+    .front { fill: #1C6D67; }
+  }
+
+
+  /* Clouds */
+
+  .cloud {
+    width: 877.54px;
+    height: 486.5px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+  }
+
+  .cloud_left {
+    transform: translate(-1274px, 872px);
+
+    .cloud__shadow {
+      position: absolute;
+      left: -25px;
+      top: 200px;
+    }
+  }
+
+  .cloud_right {
+    transform: translate(470px, 1210px);
+
+    .cloud__shadow {
+      position: absolute;
+      left: -65px;
+      top: 151px;
+    }
+  }
+
+  .cloud__item {
+    position: relative;
+  }
+
+}
+
+@media screen and (max-width: 1280px) {
+  
+  .animatronix {
+    .red-cube {
+      transform: translateX(calc(-50% + 867px - 90px));
+    }
+    .green-cube {
+      transform: translateX(calc(-50% + 284px - 90px));
+
+      #green-cube--shadow {
+          left: -48px;
+          top: 48.5px;
+      }
+    }
+  }
+}

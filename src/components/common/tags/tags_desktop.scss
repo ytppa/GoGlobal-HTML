@@ -1,0 +1,17 @@
+
+
+/* Block: Tags */
+.tags {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tag {
+  width: 100px;
+  height: 85px;
+  background: url('/src/img/tags/tag_rock-n-roll.svg') no-repeat center center;
+}

@@ -1,0 +1,55 @@
+
+/* button */
+.button {
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-weight: 700;
+  padding: 1.25rem 3.5rem;
+  color: $button-color;
+  background-color: $button-bg-color;
+  border: none;
+  border-radius: 2px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color $interact-duration linear;
+
+  // Yellow > Blue 
+  &.button-yellow {
+    background-color: $yellow;
+  }
+
+  &:hover {
+    background-color: $dark-red;
+
+    // Yellow > Blue 
+    &.button-yellow {
+      background-color: $blue;
+    }
+  }
+}
+
+
+/* buttons */ 
+.buttons {
+  display: flex;
+
+  &.buttons_align-right { 
+    justify-content: flex-end; 
+  }
+
+  &.buttons_align-left{ 
+    justify-content: flex-start; 
+  }
+
+  &.buttons_align-center { 
+    justify-content: center; 
+  }
+
+  &.buttons_top-attached {
+    .button {
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+    }
+  }
+}

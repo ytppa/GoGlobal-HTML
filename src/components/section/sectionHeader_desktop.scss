@@ -1,0 +1,17 @@
+
+/* Block: section-header */
+.section-header {
+  &.section-header__with-icons {
+    h2 {
+      display: inline-block;
+    }
+  }
+
+  .section-header__icons {
+    display: flex;
+    justify-content: right;
+    position: absolute; 
+    top: -6px;
+    right: -64px;
+  }
+}

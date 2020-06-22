@@ -1,0 +1,4 @@
+<svg class="slider-nav slider-nav__right" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect class="slider-arrow__rect" x="1" y="1" width="58" height="58" rx="1" stroke="#0AA1D0" stroke-width="2"/>
+<path class="slider-arrow__arrow" d="M27.4285 38.5713L33.966 31.1992C34.6375 30.442 34.6375 29.3024 33.966 28.5452L27.4285 21.1731" stroke="#0AA1D0" stroke-width="2" stroke-linecap="round"/>
+</svg>

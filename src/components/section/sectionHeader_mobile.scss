@@ -1,0 +1,21 @@
+
+/* Block: section-header */
+.section-header {
+  padding: 0 $content-padding;
+
+  &.section-header__with-icons {
+    h2 {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .section-header__icons {
+    display: flex;
+    justify-content: right;
+    position: absolute; 
+    top: -1rem;
+    right: calc(11px - #{$content-padding});
+  }
+}

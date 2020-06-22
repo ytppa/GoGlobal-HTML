@@ -1,0 +1,119 @@
+@import "./submenu_desktop.scss";
+@import "./contactIcons_desktop.scss";
+
+/* MENU */
+
+nav.menu { 
+  display: block; 
+
+  .menu__button {
+    display: none;
+  }
+
+  .menu__inner {
+    padding-top: 17px;
+    padding-left: 62px;
+
+    > ul {
+      display: flex; 
+      flex-flow: row wrap;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.menu__item {
+  display: block; 
+  position: relative;
+  margin: 12px 12px;
+}
+
+.menu__item > a,
+.menu__item > span {
+  display: block; 
+  color: $header-main-color;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 6px 12px 7px 12px;
+  // transition: 
+  //   color $interact-duration linear, 
+  //   background-color $interact-duration linear;
+}
+
+.menu__item > a::after, 
+.menu__item > span::after{
+  display: block;
+  content: '';
+  height: 2px;
+  width: 0px;
+  background-color: $red;
+  position: absolute;
+  left: 12px;
+  bottom: 0px;
+  transition: width .2s ease-out;
+}
+
+.menu__item > a:hover::after, 
+.menu__item > span:hover::after, 
+.menu__item_active > a::after,
+.menu__item_active > span::after {
+  width: calc(100% - 24px);
+}
+
+
+
+.menu__item_has-submenu {
+
+  & > a:hover::after, 
+  & > span:hover::after {
+    display: none;
+  }
+
+
+  &:hover > a, 
+  &:hover > span {
+    background: white;
+    color: $blue;
+    padding: 12px 19px 14px 22px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+
+    position: relative;
+    margin: -6px -7px -5px -10px;
+   
+    animation-name: appear-from-zero-opacity;
+    animation-duration: $interact-duration;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+  }
+
+  .submenu { 
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+  }
+
+  .submenu_left {
+    left: auto;
+    right: -7px;
+    transform: none;
+  }
+
+  .submenu_right {
+    left: -10px;
+    transform: none;
+  }
+  
+  &:hover .submenu { 
+    display: block; 
+    animation-name: appear-from-zero-opacity;
+    animation-duration: $interact-duration;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+  }
+}

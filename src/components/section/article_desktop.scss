@@ -1,0 +1,35 @@
+/* Block: article */
+
+.article {
+  /* with left image (baloon + cloud) */
+  &.article__left-image {
+    min-height: 430px;
+    position: relative;
+
+    .article__inner {
+      padding-left: 400px;
+      padding-top: calc(#{$section--padding-under-header} + 0.5rem);
+
+      p {
+        font-size: 1rem;
+        line-height: 1.75rem;
+        padding-top: 1em;
+      }
+
+      .buttons {
+        margin-top: 5.75rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+  }
+
+  /* article for 4 columns  */
+  &.article__type-2 {
+    .article__inner { 
+      padding-top: $section--padding-under-header;
+
+      p { padding-right: 6%; }
+    }
+  }
+}

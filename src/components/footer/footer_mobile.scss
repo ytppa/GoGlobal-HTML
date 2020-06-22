@@ -1,0 +1,120 @@
+/* FOOTER */
+.footer { 
+  display: block;
+  width: 100%;
+  background-color: $blue;
+  color: white;
+  padding-top: 2.31rem;
+  padding-bottom: 4.75rem;
+  padding-left: $content-padding;
+  padding-right: $content-padding;
+
+  position: relative;
+
+  .content-item {
+    margin-bottom: 0;    
+  }
+
+  .footer-content {
+    height: 100%;
+    display: flex; 
+    flex-direction: column;
+
+
+    ul, 
+    ul li {
+      list-style-type: none;
+    }
+
+    .footer-content__section-1,
+    .footer-content__section-2,
+    .footer-content__section-3,
+    .footer-content__section-4 {
+      font-size: 0.875rem;
+      line-height: 1.43em;
+      position: relative;
+
+      ul { width: 80%; }
+
+      li { margin-bottom: 0.57em; }
+    }
+
+
+    .footer-content__section-1 {
+      order: 1; 
+      font-weight: bold; 
+      padding-top: 3.6rem;
+      position: relative;
+
+      .footer-content__socials {
+        margin-top: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 0;
+
+        > ul {
+          display: flex; 
+        }
+
+        .white-social {
+          display: block;
+          margin-right: 1.3125rem;
+          width: 1.625rem;
+          height: 1.625rem;
+          
+          background-position: center center;
+          background-size: contain;
+          background-repeat: no-repeat;
+
+          &.white-social_fb { background-image: url('/src/img/social-icons/social-white_fb.svg'); }
+          &.white-social_tg { background-image: url('/src/img/social-icons/social-white_tg.svg'); }
+          &.white-social_vk { background-image: url('/src/img/social-icons/social-white_vk.svg'); }
+          &.white-social_yt { background-image: url('/src/img/social-icons/social-white_yt.svg'); }
+        }
+      }
+      
+    }
+
+    .footer-content__section-2 { 
+      order: 3;
+      margin-top: 2.5rem; 
+    }
+
+    .footer-content__section-3 { 
+      order: 2; 
+      margin-top: 2.5rem; 
+    }
+
+    .footer-content__section-4 { 
+      order: 4; 
+      margin-top: 3.75rem; 
+
+      & > p {
+        font-size: 0.875rem;
+      }
+    }
+
+    .footer-content__section-5 {
+      display: block;
+      order: 5;
+      margin-top: 3.5rem; 
+
+      .www-5th-ru {
+        display: block;
+        padding-left: 2.44rem;
+        min-height: 40px;
+        font-size: 0.75rem;
+        line-height: 1.68em;
+        
+        text-decoration: none;
+
+        background-image: url('/src/img/5th-logo.png');
+        background-repeat: no-repeat;
+        background-size: 28px auto;
+        background-position: 0 3px;
+      }
+    }
+
+  }
+}

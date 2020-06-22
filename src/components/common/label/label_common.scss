@@ -1,0 +1,12 @@
+/* Block: label */
+.label {
+  display: inline-block;
+  width: 21px;
+  height: 22px;
+  margin: 0 6px;
+  position: relative;
+  top: 6px;
+
+  &.label_gb { background: url('/src/img/labels/label-gb.svg') no-repeat center center; }
+  &.label_us { background: url('/src/img/labels/label-us.svg') no-repeat center center; }
+}

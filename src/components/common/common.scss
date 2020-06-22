@@ -1,0 +1,65 @@
+
+
+$header-main-color: white;
+$header-alt-color: #FFE456;
+
+$gray: #F3F3F3;
+
+$main-color: #333333;
+$red: #EA5757;
+$dark-red: #952B2B;
+
+$blue: #0AA1D0;
+$dark-blue: #007EA6;
+
+$yellow: #FFE36C;
+
+$button-color: white;
+$button-bg-color: $red;
+
+$button-yellow-color: $header-alt-color;
+$button-bg-color: $red;
+
+$interact-duration: 0.2s;
+
+$baloon-anim-flowing-duration: 3s;
+$baloon-appearing-duration: 4s;
+$baloon-anim-hover-duration: 1s;
+$baloon-anim-hover-easing: cubic-bezier(0.65, 0, 0.35, 1);
+
+$gray-bg-color: #F1F5F8;
+
+
+html, body, h1, h2, h3, h4, h5, h6, a, p, span, em, small, strong, sub, sup, mark, del, ins, strike, abbr, dfn, blockquote, q, cite, code, pre, ol, ul, li, dl, dt, dd, div, section, article, main, aside, nav, header, hgroup, footer, img, figure, figcaption, address, time, audio, video, canvas, iframe, details, summary, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html { 
+  height: 100%; 
+}
+
+body { 
+  width: 100%; 
+  height: 100%; 
+  margin: 0; 
+  padding: 0;  
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  color: $main-color;
+}
+
+.wrapper { 
+  width: 100%; 
+  height: 100%; 
+}
+
+.no-scroll { overflow: hidden; }

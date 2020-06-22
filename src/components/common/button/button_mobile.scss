@@ -1,0 +1,40 @@
+
+/* buttons */ 
+.buttons {
+  display: flex;
+  width: $content-width;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* button */
+.button {
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-weight: 700;
+  padding: 1.25rem 3.5rem;
+  color: $button-color;
+  background-color: $button-bg-color;
+  border: none;
+  border-radius: 2px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color $interact-duration linear;
+
+  // Yellow > Blue 
+  &.button-yellow {
+    background-color: $yellow;
+    color: $red;
+  }
+
+  &:hover {
+    background-color: $dark-red;
+
+    // Yellow > Blue 
+    &.button-yellow {
+      background-color: $blue;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+
+/* SIGN IN */
+
+.sign-in {
+  display: block;
+  text-decoration: none;
+
+  position: relative;
+  padding-left: 18px;
+  padding-top: 17px;
+
+  .sign-in__link { 
+    color: $header-main-color;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    display: block;
+    padding: 6px 6px;
+    margin: 13px 6px 12px 6px;
+  }
+
+  .sign-in__ribbon {
+      background-color: $red;
+      height: 50px; 
+      width: 17px;
+      position: absolute; 
+      left: 0;
+      top: 0;
+      transition: height $interact-duration ease-out;
+  }
+
+  .sign-in__ribbon:after,
+  .sign-in__ribbon:before {
+      content: '';
+      position: absolute;
+      border-top: 10px solid $red; // angle degree, reduce to reduce degree of angles
+      height: 0; // no height, no content, just border
+      width: 0;
+      top: 100%;
+  }
+
+  .sign-in__ribbon:after { // right angle
+      border-left: 8px solid transparent;
+      right:0;
+  }
+
+  .sign-in__ribbon:before { // left angle
+      border-right: 8px solid transparent;
+      left:0;
+  }
+
+  &:hover {
+    .sign-in__ribbon {
+      height: 33px;
+    }
+  }
+}

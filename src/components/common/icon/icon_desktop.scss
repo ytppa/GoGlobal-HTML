@@ -1,0 +1,71 @@
+/* icons */
+
+.icon {
+  display: block;
+  position: relative;
+  width: 2.81rem;
+  height: 2.81rem;
+  border-radius: 2px;
+  background-color: $red;
+  font-size: 0px;
+  line-height: 1.56rem;
+  transition: width calc(1.7 * #{$interact-duration}) linear,
+    max-width calc(1.7 * #{$interact-duration}) linear;
+  text-align: right;
+
+  &.icon_plus {
+    background-image: url('/src/img/icons/icon-plus.svg');
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 25px;
+  }
+  
+  max-width: 2.81rem;
+  span {
+    display: block;
+    opacity: 0;
+    transition: opacity calc(2 * #{$interact-duration}) cubic-bezier(.97,.01,1,.02);
+  }
+
+  &:hover {
+    /* background-color: $dark-red; */
+    overflow: hidden;
+    font-size: 1rem;
+    line-height: 25px;
+    width: auto;
+    max-width: 15rem;
+    padding: 10px;
+    color: white;
+    background-image: url();
+
+    span { opacity: 1; }
+
+    &.icon_inner-link {
+      text-decoration: none;
+
+      span {
+        display: block;
+        position: relative;
+        
+        &::after {
+          content:'';
+          display: block;
+          position: absolute;
+          left: 0px;
+          right: 0px;
+          bottom: 0px;
+          height: 1px;
+          border-bottom: $red 1px dashed;
+        }
+      }
+    }
+  }
+
+  &.icon_yellow {
+    background-color: $yellow;
+
+    &:hover { 
+      color: $red ;
+    }
+  }
+}

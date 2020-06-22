@@ -1,0 +1,38 @@
+/* Block: article */
+
+.article {
+
+  .article__inner {
+    padding: 0 $content-padding;
+  }
+  
+  /* with left image (baloon + cloud) */
+  &.article__left-image {
+    padding-bottom: 480px;
+    position: relative;
+
+    .article__inner {
+      // padding-top: calc(#{$section--padding-under-header} + 0.5rem);
+      padding-top: 1rem;
+
+      .buttons {
+        position: absolute;
+        left: $content-padding;
+        bottom: 0px;
+      }
+    }
+
+  }
+
+  /* article for 4 columns  */
+  &.article__type-2 {
+    .article__inner { 
+      padding: 0 $content-padding;
+      padding-top: $section--padding-under-header;
+      
+      .content--4-columns__column + .content--4-columns__column {
+        padding-top: 1.5rem;
+      }
+    }
+  }
+}

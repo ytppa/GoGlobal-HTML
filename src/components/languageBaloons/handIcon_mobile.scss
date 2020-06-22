@@ -1,0 +1,24 @@
+$icon-swipte-hand_size: 2.56rem;
+
+.language-baloons__hand-icon {
+  position: relative;
+  margin: 0 auto;
+  width: $icon-swipte-hand_size;
+  height: $icon-swipte-hand_size;
+  background-image: url('/src/img/icons/icon-swipe-hand.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+
+  animation-name: swipe-hand-shaking;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes swipe-hand-shaking {
+  0%,40% { transform: translateX(0); }
+  55% { transform: translateX(-0.5rem); }
+  85% { transform: translateX(0.5rem); }
+  100% { transform: translateX(0); }
+}

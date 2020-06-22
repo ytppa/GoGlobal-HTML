@@ -1,0 +1,22 @@
+@import "./sectionHeader_mobile.scss";
+
+@import "./article_mobile.scss";
+
+/* Block: section */
+.section {
+  margin-bottom: 3rem;
+
+  &.section_black {
+    color: $main-color;
+  }
+
+  &.section_white {
+    color: white;
+
+    h2::before {
+      background-color: white;
+    }
+  }
+
+}
+

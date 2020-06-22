@@ -1,0 +1,60 @@
+/**
+  * Common styles (variables, body, texts, colors, buttons, etc)
+  */
+@import "./components/common/common_mobile.scss";
+
+
+/**
+  * Basic page structure
+  */ 
+@import "./components/main/main_mobile.scss";
+
+@import "./components/header/header_mobile.scss";
+
+@import "./components/logo/logo_mobile.scss";
+
+@import "./components/nav/nav_mobile.scss";
+
+// @import "./components/signin/signin_mobile.scss";
+
+@import "./components/footer/footer_mobile.scss";
+
+@import "./components/content/content_mobile.scss";
+
+@import "./components/content/content-item_mobile.scss";
+
+
+/** 
+  * A variety of Sections 
+  */
+@import "./components/section/section_mobile.scss";
+
+@import "./components/section/baloonWithCloud_mobile.scss";
+
+@import "./components/flickity/pageDots_mobile.scss";
+
+@import "./components/entryBlocks/content-4Cells/content-4Cells_mobile.scss";
+
+// @import "./components/entryBlocks/content-4Columns/content-4Columns_mobile.scss";
+
+@import "./components/entryBlocks/reviews/reviews_mobile.scss";
+
+@import "./components/entryBlocks/contacts/contacts_mobile.scss";
+
+@import "./components/entryBlocks/horSlider/horSlider_mobile.scss";
+
+/**
+ * Other
+ */
+@import "./components/popup/popup_mobile.scss";
+
+@import "./components/form/form_mobile.scss";
+
+
+/** 
+  * Useless design elements
+  */
+// @import "./components/common/clouds/clouds_mobile.scss";
+
+
+// @media (max-width: 480px) {}

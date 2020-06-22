@@ -1,0 +1,30 @@
+@import "./common.scss";
+
+
+$content-width: 1200px;
+$header-height: 100px;
+$footer-height: 329px;
+$section--padding-under-header: 4rem;
+$section-margin: 10rem;
+
+/* Cautions: Some Imports are below at the end of this file */
+
+
+/* BG */ 
+
+body {
+  // background-image: url('/src/img/bg-yellow.svg'), url('src/img/bg-red.svg');
+  // background-repeat: no-repeat, no-repeat;
+  // background-size: 2800px, 2800px;
+  // background-position: center 0px, center 2550px;
+}
+
+@import "./texts/texts_desktop.scss";
+@import "./icon/icon_desktop.scss";
+@import "./button/button_desktop.scss";
+// @import "../bodyBg/bodyBg.scss";
+
+@keyframes appear-from-zero-opacity {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

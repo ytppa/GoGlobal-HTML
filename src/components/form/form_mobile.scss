@@ -1,0 +1,112 @@
+.form {
+  padding: 0;
+  position: relative;
+
+  .form__group {}
+
+  .form__field-container {
+    width: 100%;
+  }
+
+  .form__field,
+  input[type=text],
+  input[type=password],
+  input[type=number],
+  textarea,
+  select {
+    width: 100%;
+
+    font-size: 0.875rem;
+    padding: 1rem 2rem;
+
+    border: none;
+    background: #F1F5F8;
+    box-shadow: inset 4px 4px 7px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+
+    &:focus {
+      box-shadow: 0 0 1px 3px $blue;
+      box-shadow: 0 0 0 3px -moz-mac-focusring;
+      outline: none;
+    }
+  }
+
+  textarea { line-height: 1.35em; }
+
+  &> * + * {
+    margin-top: 1.5625rem;
+  }
+
+  // Customizing selectors
+  select {
+    display: block;
+    box-sizing: border-box;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #F1F5F8;
+    
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='9' viewBox='0 0 13 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.24615 8.16375C6.84853 8.60939 6.15147 8.60939 5.75384 8.16375L0.625099 2.41577C0.0500447 1.77129 0.507514 0.750001 1.37125 0.750001L11.6287 0.750002C12.4925 0.750002 12.95 1.77129 12.3749 2.41577L7.24615 8.16375Z' fill='%23EA5757'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1.2em top 50%;
+    background-size: 1em auto;
+   
+    /* Hide arrow icon in IE browsers */
+    &::-ms-expand {
+      display: none;
+    }
+  
+    /* Set options to normal weight */
+    & option {
+      font-weight: inherit;
+    }
+  }
+
+
+  .form__field-container_file {
+    margin-top: 1.3625rem;
+    position: relative;
+
+    .form__field-label {
+      display: inline-block;
+      padding: 8px 12px; 
+      cursor: pointer;
+
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.33301 0L6.33301 7.33333' stroke='%230AA1D0'/%3E%3Cpath d='M2 4.33325L6.33333 7.66659L11 4.33325' stroke='%230AA1D0'/%3E%3Cpath d='M0 12L13 12' stroke='%230AA1D0'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-position: left 1em top calc(50% + 0.2em);
+      background-size: 0.8125rem 0.8125rem;
+      padding: .8em 0 .8em 2.5rem;
+      border-radius: 2px;
+      outline: none;
+      -webkit-user-select: none;
+      font-size: 0.8125rem;
+    }
+
+    input[type=file] {
+      color: transparent;
+      position: absolute; 
+      left: 0%;
+      top: 0%;
+      right: 0%;
+      bottom: 0%;
+      border-radius: 2px;
+      
+      &::-webkit-file-upload-button {
+        visibility: hidden;
+      }
+
+      &:focus {
+        box-shadow: 0 0 1px 3px $blue;
+        box-shadow: 0 0 0 3px -moz-mac-focusring;
+        outline: none;
+      }
+    
+      &::before {
+        content: 'Прикрепите свое резюме, пожалуйста';
+        display: block;
+        
+      }
+    }
+  }
+}

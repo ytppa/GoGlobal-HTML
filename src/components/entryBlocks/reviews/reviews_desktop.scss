@@ -1,0 +1,66 @@
+@import "../../common/socialLinks/socialLinks_desktop.scss";
+
+
+/* Block reviews */ 
+
+.reviews-container { 
+  position: relative;
+  margin-top: -10rem!important;
+}
+
+.reviews {
+  display: flex;
+  flex-wrap: wrap;
+	align-items: stretch;
+  align-content: stretch;
+  margin-bottom: 2.6rem;
+}
+
+
+.reviews__item {
+  flex: 0 0 50%;
+  min-height: 186px;
+  margin: 4rem 0;
+  display: flex;
+
+}
+
+.review__item-image { 
+  flex: 0 0 170px; 
+  width: 170px;
+  height: 186px;
+}
+
+.review__item-image img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
+.review__item-text { 
+  flex: 1 1 auto; 
+  margin-left: 2rem;
+  margin-right: 2rem;
+
+  h4 {
+    padding-top: 0;
+    font-size: 1.125rem;
+    line-height: 1.77em;
+
+    a {
+      text-decoration: none;
+      &:hover {
+        color: $dark-blue
+      }
+    }
+  }
+
+  p {
+    font-size: 0.938rem;
+    line-height: 1.6em;
+  }
+
+  .social-links {
+    margin-top: 2rem;
+  }
+}
